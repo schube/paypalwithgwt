@@ -25,7 +25,7 @@ public class PaypalWithGwt implements EntryPoint {
 		pu.reference_id = "123";
 		pu.description = "Tickets LieMudRun";
 		PurchaseUnitAmount pua = new PurchaseUnitAmount();
-		pua.value = 23d;
+		pua.value = 0.1d;
 		pu.amount = pua;
 
 		CreateOptions options = new CreateOptions();
@@ -39,6 +39,13 @@ public class PaypalWithGwt implements EntryPoint {
 		  return actions.order.create(options);
 		};
 		
+		config.onApprove = (data, actions) -> {
+			
+			GWT.log("Order ID: " + data.get("orderID"));
+			GWT.log("Payer ID: " + data.get("payerID"));
+			return actions.order.capture();
+			
+		};
 		
 		
 		Paypal.PaypalButton b = Paypal.Buttons(config);

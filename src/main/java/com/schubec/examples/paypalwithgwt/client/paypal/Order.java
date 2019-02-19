@@ -10,4 +10,6 @@ public class Order {
 	
 
 	public native Order create(CreateOptions options);
+
+	public native Order capture();
 }
