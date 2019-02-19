@@ -10,6 +10,8 @@ import com.schubec.examples.paypalwithgwt.client.paypal.Paypal;
 import com.schubec.examples.paypalwithgwt.client.paypal.PurchaseUnit;
 import com.schubec.examples.paypalwithgwt.client.paypal.PurchaseUnitAmount;
 
+import jsinterop.base.JsPropertyMap;
+
 public class PaypalWithGwt implements EntryPoint {
 	public void onModuleLoad() {
 		GWT.log("onModuleLoad");
@@ -32,7 +34,11 @@ public class PaypalWithGwt implements EntryPoint {
 		options.purchase_units[0] = pu;
 
 		PaypalButtonConfiguration config = new PaypalButtonConfiguration();
-		config.createOrder = new CreateOrderInterface(String data, String actions) {
+
+		config.createOrder = (data, actions) -> {
+		  JsPropertyMap param1 = JsPropertyMap.of();
+		  JsPropertyMap param2 = JsPropertyMap.of();
+		  return actions.order.create(param1, param2);
 		};
 		
 		
