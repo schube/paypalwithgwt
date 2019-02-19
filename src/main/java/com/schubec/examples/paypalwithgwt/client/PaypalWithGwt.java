@@ -19,13 +19,13 @@ public class PaypalWithGwt implements EntryPoint {
 		ApplicationContext context = new ApplicationContext();
 		context.brand_name = "LieMudRun";
 		context.locale = "de-DE";
-		context.shipping_preference = "NO-SHIPPING";
+		context.shipping_preference = "NO_SHIPPING";
 
 		PurchaseUnit pu = new PurchaseUnit();
 		pu.reference_id = "123";
 		pu.description = "Tickets LieMudRun";
 		PurchaseUnitAmount pua = new PurchaseUnitAmount();
-		pua.amount = 23d;
+		pua.value = 23d;
 		pu.amount = pua;
 
 		CreateOptions options = new CreateOptions();

@@ -7,7 +7,7 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, name="Object", namespace = JsPackage.GLOBAL)
 	public class PurchaseUnitAmount {
 		@JsProperty
-		public double amount;
+		public double value;
 
 
 
