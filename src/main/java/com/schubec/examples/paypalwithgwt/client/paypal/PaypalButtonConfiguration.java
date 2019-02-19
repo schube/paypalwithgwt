@@ -1,11 +1,25 @@
 package com.schubec.examples.paypalwithgwt.client.paypal;
 
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
+import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 
 @JsType(isNative = true, name="Object", namespace = JsPackage.GLOBAL)
 public class PaypalButtonConfiguration {
-	public native void createOrder(Object data, ActionCallback fn);
-	public native void onApprove(Object data, ActionCallback fn);
+	
+	@JsOverlay
+	public static PaypalButtonConfiguration of(CreateOrderInterface createOrder, OnApproveInterface onApprove) {
+		PaypalButtonConfiguration config = new PaypalButtonConfiguration();
+		config.createOrder = createOrder;
+		config.onApprove = onApprove;
+		return config;
+	}
+	
+	@JsProperty
+	public CreateOrderInterface createOrder;
+	
+	@JsProperty
+	public OnApproveInterface onApprove;
 }

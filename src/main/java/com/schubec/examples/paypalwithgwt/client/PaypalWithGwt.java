@@ -5,6 +5,7 @@ import com.google.gwt.core.client.GWT;
 import com.schubec.examples.paypalwithgwt.client.paypal.ApplicationContext;
 import com.schubec.examples.paypalwithgwt.client.paypal.PaypalButtonConfiguration;
 import com.schubec.examples.paypalwithgwt.client.paypal.CreateOptions;
+import com.schubec.examples.paypalwithgwt.client.paypal.CreateOrderInterface;
 import com.schubec.examples.paypalwithgwt.client.paypal.Paypal;
 import com.schubec.examples.paypalwithgwt.client.paypal.PurchaseUnit;
 import com.schubec.examples.paypalwithgwt.client.paypal.PurchaseUnitAmount;
@@ -31,10 +32,12 @@ public class PaypalWithGwt implements EntryPoint {
 		options.purchase_units[0] = pu;
 
 		PaypalButtonConfiguration config = new PaypalButtonConfiguration();
+		config.createOrder = new CreateOrderInterface(String data, String actions) {
+		};
 		
 		
 		
-		Paypal.PaypalButton b = Paypal.Buttons(config);
+		Paypal.PaypalButton b = Paypal.Buttons(null);
 		b.render("body");
 
 	}
