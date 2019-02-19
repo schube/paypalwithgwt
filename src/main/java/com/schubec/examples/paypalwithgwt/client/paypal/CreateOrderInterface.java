@@ -4,5 +4,5 @@ import jsinterop.annotations.JsFunction;
 
 @JsFunction
 public interface CreateOrderInterface {
-  Order createOrder(Object data, Object actions);
+  Order createOrder(Object data, Action actions);
 }

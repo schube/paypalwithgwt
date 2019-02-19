@@ -36,7 +36,7 @@ public class PaypalWithGwt implements EntryPoint {
 		PaypalButtonConfiguration config = new PaypalButtonConfiguration();
 
 		config.createOrder = (data, actions) -> {
-		  JsPropertyMap param1 = JsPropertyMap.of();
+		  JsPropertyMap param1 = null; //we do not need the first param
 		  JsPropertyMap param2 = JsPropertyMap.of();
 		  return actions.order.create(param1, param2);
 		};

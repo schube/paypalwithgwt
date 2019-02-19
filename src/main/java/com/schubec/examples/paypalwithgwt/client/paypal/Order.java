@@ -6,5 +6,6 @@ import jsinterop.annotations.JsPackage;
 
 @JsType(isNative = true, namespace = JsPackage.GLOBAL, name="order")
 public class Order {
-	public native void create(JsPropertyMap options);
+
+	public native Order create(JsPropertyMap param1, JsPropertyMap param2);
 }
