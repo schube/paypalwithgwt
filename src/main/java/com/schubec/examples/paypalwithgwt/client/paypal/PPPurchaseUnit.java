@@ -4,16 +4,16 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name="Object", namespace = JsPackage.GLOBAL)
-public class ApplicationContext {
+@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+public class PPPurchaseUnit {
 
 	@JsProperty
-	public String locale;
+	public String reference_id;
 
 	@JsProperty
-	public String brand_name;
+	public String description;
 
 	@JsProperty
-	public String shipping_preference;
+	public PPPurchaseUnitAmount amount;
 
 }

@@ -4,11 +4,8 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name="Object", namespace = JsPackage.GLOBAL)
-	public class PurchaseUnitAmount {
-		@JsProperty
-		public double value;
-
-
-
+@JsType(isNative = true, namespace = JsPackage.GLOBAL)
+public class PPAction {
+	@JsProperty(name = "order")
+	public PPOrder order;
 }

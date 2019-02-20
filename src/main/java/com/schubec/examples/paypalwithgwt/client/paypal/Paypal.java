@@ -1,7 +1,5 @@
 package com.schubec.examples.paypalwithgwt.client.paypal;
 
-
-
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
@@ -10,7 +8,7 @@ import jsinterop.annotations.JsType;
 public class Paypal {
 
 	@JsMethod
-	public static native PaypalButton Buttons(PaypalButtonConfiguration configuration);
+	public static native PaypalButton Buttons(PPButtonConfiguration configuration);
 
 	public class PaypalButton {
 
@@ -19,5 +17,4 @@ public class Paypal {
 
 	}
 
-	
 }

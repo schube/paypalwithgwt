@@ -4,12 +4,12 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-@JsType(isNative = true, name="Object", namespace = JsPackage.GLOBAL)
-public class CreateOptions {
+@JsType(isNative = true, name = "Object", namespace = JsPackage.GLOBAL)
+public class PPCreateOptions {
 
 	@JsProperty
-	public ApplicationContext application_context;
-	
+	public PPApplicationContext application_context;
+
 	@JsProperty
-	public PurchaseUnit[] purchase_units;
+	public PPPurchaseUnit[] purchase_units;
 }
