@@ -4,6 +4,6 @@ import jsinterop.annotations.JsFunction;
 import jsinterop.base.JsPropertyMap;
 
 @JsFunction
-public interface PPOnApproveInterface {
-	PPOrder onApprove(JsPropertyMap<String> data, PPAction actions);
+public interface OnApproveInterface {
+	Order onApprove(JsPropertyMap<String> data, Action actions);
 }
