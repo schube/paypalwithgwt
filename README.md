@@ -1,5 +1,11 @@
 # paypalwithgwt
 
+This is a sample project which shows how PayPal JS SDK can be integrated into a GWT app.
+
+It also serves as an example for JSInterop.
+
+Thank you Ahmad K. Bawaneh and Colin Alworth for your help (or better: for all the hard/main work). My contribution to the project is very small.
+
 ## Config
 
 In src/main/webapp/PaypalWithGTW.html find
