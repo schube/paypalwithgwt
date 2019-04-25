@@ -8,10 +8,9 @@ import jsinterop.annotations.JsType;
 public class Paypal {
 
 	@JsMethod
-	public static native PaypalButton Buttons(PPButtonConfiguration configuration);
+	public static native PaypalButton Buttons(PaypalButtonConfiguration configuration);
 
 	public class PaypalButton {
-
 		@JsMethod
 		public native void render(String renderTarget);
 
