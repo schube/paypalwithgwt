@@ -73,6 +73,17 @@
             <version>${elemento.version}</version>
             <classifier>sources</classifier>
         </dependency>
+        <dependency>
+            <groupId>org.fusesource.restygwt</groupId>
+            <artifactId>restygwt</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <!-- Java WS, used for restygwt -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1</version>
+        </dependency>          
     </dependencies>
 
     <build>
@@ -118,7 +129,7 @@
                     <warDir>${project.build.directory}/${project.build.finalName}</warDir>
                     <jvmArgs>
                         <arg>-Xms1G</arg>
-                        <arg>-Xmx2G</arg>
+                        <arg>-Xmx8G</arg>
                     </jvmArgs>
                 </configuration>
             </plugin>

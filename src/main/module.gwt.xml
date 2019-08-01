@@ -30,6 +30,8 @@
     <!-- Other module inherits                                      -->
     <inherits name='org.jboss.gwt.elemento.Core'/>
 
+    <inherits name="org.fusesource.restygwt.RestyGWT"/>
+
     <!-- Specify the app entry point class.                         -->
     <entry-point class='com.schubec.examples.paypalwithgwt.client.PaypalWithGwt'/>
 
