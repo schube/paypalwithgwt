@@ -1,6 +1,6 @@
 # paypalwithgwt
 
-This is a sample project which shows how PayPal JS SDK can be integrated into a GWT app.
+This is a sample project which shows how PayPal JS SDK (https://developer.paypal.com/docs/checkout/integrate/) can be integrated into a GWT app.
 
 It also serves as an example for JSInterop.
 

@@ -28,9 +28,9 @@ public class PaypalWithGwt implements EntryPoint {
                 (data, actions) -> {
                 	GWT.log(data.toString());
                 	GWT.log(actions.toString());
-                	Promise x = actions.order.capture();
-                	x.then(evt -> {
-                		GWT.log(evt.toString());
+                	Promise promise = actions.order.capture();
+                	promise.then(details -> {
+                		GWT.log(details.toString());
                 		PaypalRestService service = GWT.create(PaypalRestService.class);
                 		service.getOrder(data.get("orderID"), new TextCallback() {
 
