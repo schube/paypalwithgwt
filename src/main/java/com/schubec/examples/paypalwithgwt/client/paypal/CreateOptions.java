@@ -8,14 +8,17 @@ import jsinterop.annotations.JsType;
 public class CreateOptions {
 
 	@JsOverlay
-	public static CreateOptions of(ApplicationContext applicationContext, PurchaseUnit purchaseUnit){
-		CreateOptions createOptions=new CreateOptions();
+	public static CreateOptions of(ApplicationContext applicationContext, Payer payer, PurchaseUnit purchaseUnit) {
+		CreateOptions createOptions = new CreateOptions();
 		createOptions.application_context = applicationContext;
-		createOptions.purchase_units = new PurchaseUnit[]{purchaseUnit};
+		createOptions.purchase_units = new PurchaseUnit[] { purchaseUnit };
+		createOptions.payer = payer;
 		return createOptions;
 	}
 
 	public ApplicationContext application_context;
-	
+
+	public Payer payer;
+
 	public PurchaseUnit[] purchase_units;
 }

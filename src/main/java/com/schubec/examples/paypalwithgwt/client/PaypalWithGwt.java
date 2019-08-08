@@ -19,9 +19,10 @@ public class PaypalWithGwt implements EntryPoint {
         
         ApplicationContext context = ApplicationContext.of("de-DE","LieMudRun2" , "NO_SHIPPING");
 
-        PurchaseUnit pu = PurchaseUnit.of("123", "Tickets LieMudRun", 0.1d);
+        Payer payer = Payer.of("officetest@gmail.com", Name.of("SchulzTEST", "Bernhard"), Address.of("Musterstrasse","", "", "Salzburg", "5020", "AT"));
+		PurchaseUnit pu = PurchaseUnit.of("123", "Tickets LieMudRun", 0.1d);
 
-        CreateOptions options = CreateOptions.of(context, pu);
+        CreateOptions options = CreateOptions.of(context, payer, pu);
 
         PaypalButtonConfiguration config = PaypalButtonConfiguration.of(
                 (data, actions) -> actions.order.create(options),
